@@ -1,23 +1,32 @@
 import {Form, Input} from 'antd';
 import styled from "styled-components"
 
+export const Container = styled.div`
+  justify-content: space-between;
+  display: flex;
+  height: 100vh;
+  img{
+    width: fit-content;
+  }
+`
 export const Background = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
   font-family: 'Poppins';
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   background-color: #191816;
   color: #D5CCB6;
+  width: 100%;
 `
+
 export const InnerLogin = styled.div`
 
   width: 650px;
   height: 450px;
   display: flex;
-  position: relative;
-  top: 80px;
-  left: 100px;
+
   justify-content: center;
   flex-direction: column;
   background-color:#24221F;
@@ -32,6 +41,7 @@ export const Logo = styled.div`
   gap: 10px;
   top: 30px;
   left: 40px;
+  justify-self: flex-start;
 `
 export const Title = styled.div`
   display: flex;
