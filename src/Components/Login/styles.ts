@@ -37,7 +37,18 @@ export const InnerLogin = styled.div`
   }
   display: flex;
   align-items: center;
-
+  .password-info{
+  display: flex;
+  gap: 10px;
+    p{
+    font-weight: 600;
+    color: #D4CCB6;
+    font-size: 14px;
+  }
+    font-weight: 600;
+    color: #FFC632;
+    font-size: 14px;
+}
 `;
 export const Logo = styled.div`
   display: flex;
@@ -46,6 +57,9 @@ export const Logo = styled.div`
   top: 30px;
   left: 40px;
   justify-self: flex-start;
+  @media (max-width: 1000px){
+    position: absolute;
+  }
 `
 export const Title = styled.div`
   display: flex;
@@ -76,17 +90,8 @@ export const FormStyled = styled(Form)`
   Input{
     width: 100%;
   }
-  .password-info{
-    display: flex;
-    p {
-      color: #FFC632;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-    }
-  }
-
 `
+
 export const InputStyled = styled(Input)`
   width: 100%;
 `
@@ -125,3 +130,4 @@ span{
 `
 
 export const Image = styled.img``
+

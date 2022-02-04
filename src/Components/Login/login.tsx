@@ -1,4 +1,6 @@
 import React from "react";
+import { Checkbox } from 'antd';
+
 import {
   Background, 
   FormStyled,
@@ -7,7 +9,6 @@ import {
   Logo,
   Title,
   Image,
-  PasswordInfos,
   Enter,
   Register,
   Container} from './styles';
@@ -16,7 +17,7 @@ import {
   Button,
   Form,
   Input,
-  Checkbox} from 'antd';
+} from 'antd';
 import {
   SideImage,
   LogoCamp,
@@ -25,6 +26,7 @@ import {
   Eye,
   Lock,
   } from '../../Assets';
+
 
 export const Login = () =>{
     return(
@@ -63,10 +65,13 @@ export const Login = () =>{
           >
           <Input.Password/>
           </Form.Item>
-
+          
         </FormStyled>
-
-
+      <Checkbox className="password-info">
+        <p >lembre-me</p>
+        esqueci minha senha
+        </Checkbox>
+        
 
 
           <Enter>
