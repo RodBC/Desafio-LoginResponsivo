@@ -2,20 +2,21 @@ import {Form, Input} from 'antd';
 import styled from "styled-components"
 
 export const Container = styled.div`
-  justify-content: space-between;
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
   display: flex;
   height: 100vh;
-  img{
-    width: fit-content;
+  @media (max-width:1000px){
+    img{    
+    display: none;
   }
+
+}
 `
 export const Background = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
   font-family: 'Poppins';
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-color: #191816;
   color: #D5CCB6;
   width: 100%;
@@ -30,9 +31,12 @@ export const InnerLogin = styled.div`
   justify-content: center;
   flex-direction: column;
   background-color:#24221F;
+  @media (max-width: 1000px){
+    background-color: #191816;
+    width: 350px;
+  }
   display: flex;
   align-items: center;
-  
 
 `;
 export const Logo = styled.div`
@@ -72,26 +76,26 @@ export const FormStyled = styled(Form)`
   Input{
     width: 100%;
   }
+  .password-info{
+    display: flex;
+    p {
+      color: #FFC632;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+
 `
 export const InputStyled = styled(Input)`
   width: 100%;
 `
-export const PasswordInfos = styled.div`
-display: flex;
-align-items: center;
-p {
-    color: #FFC632;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-  }
-`
+
 export const Enter = styled.button`
   margin-top: 20px;
-  width: 100%;
+  width: 50%;
   height: 50px;
   border: none;
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #FFC632;
