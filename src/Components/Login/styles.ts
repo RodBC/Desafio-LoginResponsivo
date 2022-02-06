@@ -37,19 +37,24 @@ export const InnerLogin = styled.div`
   }
   display: flex;
   align-items: center;
+
+`;
+export const InnerInnerLogin = styled.div`
+  width: 350px;
+  align-items: left; 
   .password-info{
-  display: flex;
-  gap: 10px;
-    p{
-    font-weight: 600;
-    color: #D4CCB6;
-    font-size: 14px;
-  }
+    display: flex;
     font-weight: 600;
     color: #FFC632;
     font-size: 14px;
+    gap: 10px;
+    p{
+    margin-right: 80px;
+    color: #D4CCB6;
+    font-size: 14px;
+  }
 }
-`;
+`
 export const Logo = styled.div`
   display: flex;
   position: absolute;
@@ -75,6 +80,7 @@ export const Title = styled.div`
 
 
 export const FormStyled = styled(Form)`
+    margin-top: 20px;
   label{
     color: #AFB6C2;
   }
@@ -84,12 +90,22 @@ export const FormStyled = styled(Form)`
   .ant-form-item{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
   }
   Input{
     width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 40px;
+    background: #24221F;
+    border: 1px solid #868686;
+    box-sizing: border-box;
+    border-radius: 4px;
   }
+  .senha{
+
+
+}
 `
 
 export const InputStyled = styled(Input)`
@@ -98,7 +114,7 @@ export const InputStyled = styled(Input)`
 
 export const Enter = styled.button`
   margin-top: 20px;
-  width: 50%;
+  width: 100%;
   height: 50px;
   border: none;
   justify-content: center;

@@ -11,7 +11,8 @@ import {
   Image,
   Enter,
   Register,
-  Container} from './styles';
+  Container,
+  InnerInnerLogin} from './styles';
 
 import {
   Button,
@@ -30,64 +31,62 @@ import {
 
 export const Login = () =>{
     return(
-    <Container>
-      <Background>
+      <Container>
+        <Background>
+          <Logo>
+            <img src={LogoCamp} alt="logo" />
+            <h3>camp.in</h3>
+          </Logo>
+            <InnerLogin>
+              <InnerInnerLogin>
 
+              <Title>
+                <img src={LoginLogo} alt="login" />
+                <p>Faça seu login</p>
+              </Title>
+              <p className="paragrafoInicial"
+              style={{ color: '#AFB6C2', fontSize: '16px', }}>Entre com suas informações de cadastro</p>
+            <FormStyled>
+              <Form.Item
+                label="E-mail"
+                rules={[{ required: true }]}
+              >
+              <Input
+              placeholder='seu email'></Input>
+              </Form.Item>
+              <Form.Item
+                label="Senha"
+                rules={[{ required: true,  }]}
+              >
+              <div className="senha">
+                <Input.Password
+                placeholder={`sua senha`}
+/>
 
-        <Logo>
-          <img src={LogoCamp} alt="logo" />
-          <h3>camp.in</h3>
-        </Logo>
+              </div>
+              </Form.Item>
+            <Form.Item>
+            </Form.Item>
+            </FormStyled>
+            
+            <div className="password-info">
+              <Checkbox>
+              </Checkbox>
+              <p >lembre-me</p>
+              <span>esqueci minha senha</span>
+            </div>
 
-        <InnerLogin>
-          <Title>
-            <img src={LoginLogo} alt="login" />
-            <p>Faça seu login</p>
-          </Title>
-
-          <p style={{ color: '#AFB6C2', fontSize: '16px', }}>Entre com suas informações de cadastro</p>
-      
-
-
-        <FormStyled>
-          <Form.Item
-            label="Email"
-            name="Email"
-            rules={[{ required: true }]}
-          >
-          <Input></Input>
-          </Form.Item>
-
-          <Form.Item
-            label="Senha"
-            name="Senha"
-            rules={[{ required: true,  }]}
-          >
-          <Input.Password/>
-          </Form.Item>
-          
-        </FormStyled>
-      <Checkbox className="password-info">
-        <p >lembre-me</p>
-        esqueci minha senha
-        </Checkbox>
-        
-
-
-          <Enter>
-            <p>ENTRAR</p>
-          </Enter>
-                
-          <Register>
-            <p style={{color: '#FFC632'}}>Não tem uma conta?{' '}
-              <span >Registre-se</span>
-            </p>
-
-
-            </Register>
-            </InnerLogin>
-
+              <Enter>
+                <p>ENTRAR</p>
+              </Enter>
+            <Register>
+             <p style={{color: '#FFC632'}}>Não tem uma conta?{' '}
+                  <span >Registre-se</span>
+                </p>
+                  </Register>
+                </InnerInnerLogin>
+              </InnerLogin>
           </Background>
-          <Image src={SideImage} className="image_disappear"/>
-    </Container>
+        <Image src={SideImage} className="image_disappear"/>
+      </Container>
 )}
