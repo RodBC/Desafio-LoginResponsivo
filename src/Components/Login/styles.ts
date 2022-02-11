@@ -26,8 +26,10 @@ export const InnerLogin = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 650px;
-  height: 450px;
+  width: 70%;
+  height: 75vh;
+  border-radius: 4px;
+
   background-color:#24221F;
   @media (max-width: 1000px){
     background-color: #191816;
