@@ -1,4 +1,4 @@
-import {Form, Input} from 'antd';
+import {Form, Input, Checkbox} from 'antd';
 import styled from "styled-components"
 
 export const Container = styled.div`
@@ -6,12 +6,12 @@ export const Container = styled.div`
   display: flex;
   height: 100vh;
   @media (max-width:1000px){
-    img{    
+    .image_disappear{    
     display: none;
+    }
   }
-
-}
 `
+
 export const Background = styled.div`
   font-family: 'Poppins';
   display: flex;
@@ -23,36 +23,27 @@ export const Background = styled.div`
 `
 
 export const InnerLogin = styled.div`
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 650px;
   height: 450px;
-  display: flex;
-
-  justify-content: center;
-  flex-direction: column;
   background-color:#24221F;
   @media (max-width: 1000px){
     background-color: #191816;
     width: 350px;
   }
-  display: flex;
-  align-items: center;
-
 `;
+
 export const InnerInnerLogin = styled.div`
   width: 350px;
-  align-items: left; 
   .password-info{
     display: flex;
     font-weight: 600;
     color: #FFC632;
     font-size: 14px;
     gap: 10px;
-    p{
-    margin-right: 80px;
-    color: #D4CCB6;
-    font-size: 14px;
-  }
+    justify-content: space-between;
 }
 `
 export const Logo = styled.div`
@@ -61,10 +52,6 @@ export const Logo = styled.div`
   gap: 10px;
   top: 30px;
   left: 40px;
-  justify-self: flex-start;
-  @media (max-width: 1000px){
-    position: absolute;
-  }
 `
 export const Title = styled.div`
   display: flex;
@@ -77,39 +64,32 @@ export const Title = styled.div`
     font-size: 24px;
   }
 `
-
-
+export const CheckboxStyled = styled(Checkbox)`
+  color: #AFB6C2;
+  .ant-checkbox{
+    margin-right: 10px;
+  }
+`
 export const FormStyled = styled(Form)`
-    margin-top: 20px;
+  margin-top: 20px;
   label{
     color: #AFB6C2;
   }
-  .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
-      color: #AFB6C2;
-  }
-  .ant-form-item{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  Input{
+  
+  input{
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
     height: 40px;
-    background: #24221F;
+    background: transparent;
     border: 1px solid #868686;
     box-sizing: border-box;
     border-radius: 4px;
+
   }
-  .senha{
-
-
-}
-`
-
-export const InputStyled = styled(Input)`
+  .ant-form-item-control-input-content {
   width: 100%;
+  }
 `
 
 export const Enter = styled.button`
@@ -131,16 +111,17 @@ export const Enter = styled.button`
   }
 `;
 export const Register = styled.div`
+    display: flex;
+    justify-content: center;
     color: '#FFC632'; 
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 10px;
 
-span{
+.register{
     font-weight: 600;
     cursor: 'pointer' 
   }
   p{
-    text-align: 'center';
     margin-top: '15px'
 }
 `
